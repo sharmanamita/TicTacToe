@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="content">
+        <div *ngIf="winner"><h3>Player <strong>{{ winner }}</strong> is winner!!</h3></div>
+        <div class="float-left">Current Player : <strong>{{ player }}</strong></div>
+        <button class="btn btn-info float-right" (click)="newGame()">New Game</button>
+        <br><br>
+        <!-- <div class="card-deck"> -->
+        <!-- <div class="col-md-4"> -->
+            <div class="row">
+                <div *ngFor="let square of squares; let i=index;" class="col-md-4 col-xs-12 col-4">
+                    <app-square [player]="square" (click)="makeMove(i)"></app-square>
+                    <br>
+                </div>
+            </div>
+        <!-- </div> -->
+        <!-- </div> -->
+    </div>
+</div>
